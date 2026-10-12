@@ -10,6 +10,20 @@ export default defineConfig({
     port: 5000,
     allowedHosts: true,
     strictPort: true,
+    watch: {
+      // Replit stages workspace state inside the project directory, and Vite
+      // watches the project root. fs.watch() on those paths returns EINVAL on
+      // Replit's filesystem, which crashes the dev server, and stray
+      // tsconfig.json files under them trigger spurious full reloads.
+      // Added to Vite's own defaults (.git, node_modules, …), not replacing them.
+      ignored: [
+        '**/.local/**',
+        '**/.cache/**',
+        '**/.config/**',
+        '**/.upm/**',
+        '**/.pythonlibs/**',
+      ],
+    },
   },
   test: {
     include: ['src/**/*.test.{ts,tsx}'],
