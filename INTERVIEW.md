@@ -24,13 +24,21 @@ A complete implementation is not expected.
 
 Choose whichever task interests you most.
 
+### Add a Word
+
+Add a new word to the game, so that players can guess it and it can come up as a daily puzzle. Prove that it works.
+
+### Add Analytics and Observability
+
+Pick two or three events that would tell us something useful about how the game is played or how it behaves. Decide where they belong and log them with `console.log()`.
+
 ### Ensure Everyone Gets the Same Puzzle
 
-The current puzzle should be selected consistently for all players, regardless of where they are in the world.
+Every player should get the same puzzle on a given day, wherever they are in the world. Players shouldn't be able to predict tomorrow's word from today's, and a word shouldn't come round again too soon.
 
 ### Persist the Current Puzzle Across Refresh
 
-Players should be able to refresh the page and continue the current puzzle.
+Players should be able to refresh the page and continue today's puzzle where they left off.
 
 ### Add Player Statistics
 
@@ -38,13 +46,13 @@ Add basic statistics such as:
 
 - games played
 - wins
-- streaks
+- current and longest streak
 - guess distribution
 
 ### Extract the Game Engine
 
-We may want to reuse the game logic outside this React application, for example in a future mobile app or a backend service.
+We may want to reuse the game logic outside this React application, for example in a mobile app, or on a server that checks players' guesses.
 
 ### Add Free-Play Mode
 
-In addition to the current calendar-based puzzle, players should be able to start new games freely.
+In addition to the daily puzzle, players should be able to start new games freely, without affecting their daily puzzle.
