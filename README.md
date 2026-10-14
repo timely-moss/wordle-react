@@ -34,6 +34,6 @@ bun run lint
 
 Key presses become actions (`type_letter`, `backspace`, `submit_guess`) that a reducer applies to the game state. Everything on screen is worked out from that state.
 
-One thing that isn't obvious: `rows` in the game state holds the submitted guesses followed by the guess being typed. The helpers in `row-semantics.ts` read it for you.
+`rows` in the game state holds the submitted guesses followed by the guess being typed. The helpers in `row-semantics.ts` read it for you.
 
 Tests sit next to the code they cover.
