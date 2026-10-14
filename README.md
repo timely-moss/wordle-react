@@ -18,3 +18,22 @@ Run tests:
 ```bash
 bun run test
 ```
+
+Other checks:
+
+```bash
+bun run typecheck
+bun run lint
+```
+
+## How the app is structured
+
+- `src/game/`: the game rules, in plain TypeScript with no React
+- `src/components/`: components that display the board, the keyboard and messages
+- `src/App.tsx`: connects the two, holding the game state and handling input
+
+Key presses become actions (`type_letter`, `backspace`, `submit_guess`) that a reducer applies to the game state. Everything on screen is worked out from that state.
+
+`rows` in the game state holds the submitted guesses followed by the guess being typed. The helpers in `row-semantics.ts` read it for you.
+
+Tests sit next to the code they cover.
