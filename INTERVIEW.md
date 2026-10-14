@@ -30,7 +30,7 @@ Add a new word to the game, so that players can guess it and it can come up as a
 
 ### Add Analytics and Observability
 
-Pick two or three events that would tell us something useful about how the game is played or how it behaves. Decide where they belong and log them with `console.log()` (or a lightweight wrapper).
+Pick two or three events that would tell us something useful about how the game is played or how it behaves. Decide where they belong and log them with `console.log()`.
 
 ### Ensure Everyone Gets the Same Puzzle
 
